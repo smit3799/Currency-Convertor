@@ -1,0 +1,27 @@
+#Amount Entry
+tk.Label(root,text="Amount: ").pack(pady=6)
+amount_entry = tk.Entry(root,width=30)
+amount_entry.pack()
+
+# variable stores in the selected currency
+from_convert_var = tk.StringVar()
+from_convert_var.set(currency_option[0]) # Set the currency at default position in from convert button
+
+
+to_convert_var = tk.StringVar()
+to_convert_var.set(currency_option[1]) # Set the currency at default position in to convert button
+
+#Name Entry for from_convert
+tk.Label(root,text="From currency:").pack(padx=6,pady=6)
+from_convert_menu = tk.OptionMenu(root,from_convert_var,*currency_option) #Creating Dropdown menu for from convertor where * operator give access to see the list
+from_convert_menu.pack()                                                          # of currency which we created
+
+#Name Entry for to_convert
+tk.Label(root,text="To currency:").pack(pady=6)
+To_convert_menu = tk.OptionMenu(root,to_convert_var,*currency_option)
+To_convert_menu.pack()
+
+#Converted Amount Panel
+Converted_amount = tk.StringVar()
+Converted_entry = tk.Entry(root,textvariable=Converted_amount,width=30,state="readonly",justify="center") # The message created for the user after the conversion that ww will connect
+Converted_entry.pack(pady=10)      
