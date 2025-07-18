@@ -1,0 +1,6 @@
+#GUI Setup
+currency_option = ["USD","INR","GBP","EUR"] # creating a List of Currency for Dropdown Button
+root = tk.Tk()
+root.title("The Currency Convertor")
+root.geometry("500x400")
+root.resizable(True,True)
