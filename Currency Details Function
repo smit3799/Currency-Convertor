@@ -1,0 +1,6 @@
+def currency_details():
+    amount = float(amount_entry.get()) # get the amount from the user
+    from_convert = from_convert_var.get().upper() # get the from_convert information from user
+    to_convert = to_convert_var.get().upper() # get the to_convert information from the user
+    converted_amount = currency_conversion(from_convert,to_convert,amount)  # call the currency function
+    Converted_amount.set(f"{amount} {from_convert} = {converted_amount:.2f} {to_convert}") # set output message which whill show on GUi
